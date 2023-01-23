@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --orange:#f38015;
+    --winnig-blocks: #2d414b;
+}
+
+body{
+    color: var(--orange);
+    font-family: 'Caveat Brush';
+}
+
+nav{
+    background-color: #1f2e36;
+    height: 60px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: #2d414b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gameboard{
+    padding: 5vw;
+    display: grid;
+    grid-template-rows: repeat(3,9vw);
+    grid-template-columns: repeat(3,9vw);
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 8vw;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+
+.box:nth-child(3n){
+    border-right: none;
+}
+
+.box:nth-child(6) ~ .box{
+    border-bottom: none;
+}
+
+.box:hover{
+    background-color: #283c46;
+}
+
+button{
+    margin-bottom: 5vm;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--orange);
+    color: rgb(255, 255, 255);
+    border-color: var(--orange);
+    font-size: 18px;
+    font-weight: 600;
+    transition: 20ms transform;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.rules{
+    margin-top: 5vw;
+    margin-bottom: 3vw;
+    font-size: 1.4vw;
+}
+
+.line{
+    background-color: #e27209;
+    font-family: 'Caveat Brush';
+    height: 3px;
+    width: 0;
+    height: 8px;
+    position: relative;
+    transition: width 1s ease-in-out;
+}
+
+.win{
+    background-color: #f38015;
+    font-family: 'Caveat Brush';
+    font-size: 4vw;
+    height: 8px;
+    position: relative;
+}
